@@ -34,10 +34,17 @@
     }
 
     .team-member .pic img {
-      width: 150px; /* Set the desired width */
-      height: 150px; /* Set the desired height */
+      width: 100%; /* Ensure it takes full width of the container */
+      max-width: 150px; /* Set maximum width */
+      height: auto; /* Adjust height automatically to maintain aspect ratio */
       object-fit: cover; /* Crop the image to fit */
-      border-radius: 50%; /* Optional: make the image circular */
+      border-radius: 50%; /* Make the image circular */
+    }
+    
+    @media (max-width: 767px) {
+      .team-member .pic img {
+        max-width: 120px; /* Adjust the size for smaller screens */
+      }
     }
   </style>
 </head>
